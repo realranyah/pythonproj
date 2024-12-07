@@ -16,9 +16,13 @@ def divide(x, y):
   quo = x / y
   print(f"\nThe quotient of {x} and {y} is {quo}")
 
+def square(x):
+  area = x**2
+  print(f"The area of {x} is  {area}")
+
 def main():
   print("Welcome to the calculator!")
-  choice = input("\n[A] Add \n[B] Subtract \n[C] Multiply \n[D] Divide \n\nWhat would you like to do? ")
+  choice = input("\n[A] Add \n[B] Subtract \n[C] Multiply \n[D] Divide \n[E] Square\n\nWhat would you like to do? ")
   if choice == "A" or choice =="a":
     x = int(input("Enter the first number: "))
     y = int(input("Enter the second number: "))
@@ -35,6 +39,9 @@ def main():
     x = int(input("Enter the first number: "))
     y = int(input("Enter the second number: "))
     divide(x, y)
+  elif choice == "E" or choice== "e":
+    x = int(input("Side of Square: "))
+    square(x)
   else:
     print("Invalid choice")
 
